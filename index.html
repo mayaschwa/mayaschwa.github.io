@@ -4,59 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maya Schwartz | Data Science Portfolio</title>
+
     <style>
         body { 
-    font-family: Georgia, "Garamond", "Times New Roman", serif;
-    line-height: 1.6; 
-    margin: 0; padding: 0; 
-    background-color: #f9f9f9; 
-    color: #333;
-}
+            font-family: Georgia, "Garamond", "Times New Roman", serif;
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f9f9f9; 
+            color: #333;
+        }
+
         header {
-            background-color: #555555; /* professional grey */
+            background-color: #555555;
             color: #fff; 
-            padding: 40px 20px; 
+            padding: 50px 20px; 
             text-align: center;
         }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { font-size: 1.2em; margin-top: 10px; }
-        section { padding: 40px 20px; max-width: 900px; margin: auto; }
-        h2 { color: #555555; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 20px; }
-        a {
-    text-decoration: none; 
-    color: #1a73e8; 
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-a:hover {
-    color: #0b4f99;
-    transform: translateX(5px); 
-}
-        .project-description { margin-top: 5px; color: #555; }
+
+        header h1 { margin: 0; font-size: 2.6em; }
+        header p { font-size: 1.1em; margin-top: 10px; opacity: 0.95; }
+
+        section { 
+            padding: 40px 20px; 
+            max-width: 900px; 
+            margin: auto; 
+        }
+
+        h2 { 
+            color: #555555; 
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
         .skills span {
             display: inline-block; 
             background-color: #1a73e8; 
             color: white; 
-            padding: 5px 10px; 
+            padding: 6px 12px; 
             margin: 5px 5px 0 0; 
             border-radius: 5px; 
             font-size: 0.9em;
         }
-        footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; }
+
+        /* Project cards */
+        .project {
+            background: white;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .project a {
+            text-decoration: none; 
+            color: #1a73e8; 
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        .project a:hover {
+            color: #0b4f99;
+        }
+
+        .project-description { 
+            margin-top: 6px; 
+            color: #555; 
+        }
+
+        .tools {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* Featured section */
+        .featured {
+            border-left: 4px solid #1a73e8;
+            padding-left: 15px;
+        }
+
+        /* Contact */
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 25px; 
+            font-size: 0.85em; 
+            color: #777; 
+        }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Maya Schwartz</h1>
-    <p>Data Science & Learning and Organizational Change Student | Northwestern University Class of 2027</p>
+    <p>Data Science and Learning & Organizational Change | Northwestern University (Class of 2027)</p>
 </header>
 
 <section id="about">
     <h2>About Me</h2>
-    <p>Hi! I'm Maya, a junior at Northwestern University double majoring in Data Science & Learning and Organizational Change. I enjoy building predictive models, creating interactive visualizations, and translating complex data into actionable insights. My goal is to leverage data science to drive meaningful impact in business and social initiatives.</p>
+    <p>
+        Hi! I'm Maya, a rising senior at Northwestern University double majoring in Data Science and Learning & Organizational Change. 
+        I enjoy building predictive models, creating interactive visualizations, and translating complex data into actionable insights. 
+        My goal is to leverage data science to drive meaningful impact in business and social initiatives.
+    </p>
 </section>
 
 <section id="skills">
@@ -67,48 +127,96 @@ a:hover {
         <span>SQL</span>
         <span>SPSS</span>
         <span>Power BI</span>
-        <span>Microsoft Office Suite</span>
+        <span>Machine Learning</span>
+        <span>Data Visualization</span>
     </div>
 </section>
 
+<!-- FEATURED PROJECTS -->
+<section id="featured">
+    <h2>Featured Projects</h2>
+
+    <div class="project featured">
+        <a href="https://github.com/mayaschwa/multimodal-sentiment-classification">
+            Multimodal Sentiment Classification (Audio + Text)
+        </a>
+        <div class="tools">Python · TensorFlow · Keras · Librosa · NLP</div>
+        <div class="project-description">
+            Built deep learning LSTM models combining audio and text features to classify sentiment from conversational speech.
+            The multimodal fusion model improved performance over single-modality approaches.
+        </div>
+    </div>
+
+    <div class="project featured">
+        <a href="https://github.com/mayaschwa/my-chi-equity">
+            My Chi, My Future Program Equity Analysis
+        </a>
+        <div class="tools">Python · ggplot2 · Data Analysis</div>
+        <div class="project-description">
+            Analyzed systemic inequities in Chicago youth programs using exploratory data analysis and visualization techniques.
+        </div>
+    </div>
+</section>
+
+<!-- ALL PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/mayaschwa/my-chi-equity">My Chi, My Future Program Equity Analysis</a>
-            <div class="project-description">Analyzed systemic inequities in Chicago youth programs using Python and ggplot2 visualizations.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/gender-income-gap">Gender Income Gap by Academic Field</a>
-            <div class="project-description">Performed multivariate regression analysis using Python and pandas to explore gender disparities in post-graduate financial outcomes.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/student-stress-visualization">Student Stress Levels Visualization</a>
-            <div class="project-description">Created interactive charts visualizing trends in student stress and mental health across demographics using R and Shiny.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/subjectivity-music-analysis">Subjectivity of Music Analysis Using Spotify</a>
-            <div class="project-description">Analyzed subjectivity in spotify songs using Python, Pandas, and NLP techniques.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/supply-chain-order-classification">Supply Chain Order Classification</a>
-            <div class="project-description">Built a logistic regression model to predict on-time supply chain orders with ~79% training accuracy.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/supply-chain-order-regression">Supply Chain Order Regression</a>
-            <div class="project-description">Implemented a stacking ensemble (RF, XGBoost, CatBoost) for regression, achieving ~86% train accuracy.</div>
-        </li>
-        <li>
-            <a href="https://github.com/mayaschwa/multimodal-sentiment-classification">Multimodal Sentiment Classification with Audio & Text</a>
-            <div class="project-description">Built multimodal deep learning models combining audio and text using LSTM neural networks for sentiment classification on conversational speech.</div>
-        </li>
-    </ul>
+
+    <div class="project">
+        <a href="https://github.com/mayaschwa/gender-income-gap">
+            Gender Income Gap by Academic Field
+        </a>
+        <div class="tools">Python · Regression Analysis</div>
+        <div class="project-description">
+            Performed multivariate regression analysis to explore gender disparities in post-graduate financial outcomes.
+        </div>
+    </div>
+
+    <div class="project">
+        <a href="https://github.com/mayaschwa/student-stress-visualization">
+            Student Stress Levels Visualization
+        </a>
+        <div class="tools">R · Shiny · Data Visualization</div>
+        <div class="project-description">
+            Created interactive dashboards visualizing trends in student stress and mental health across demographics.
+        </div>
+    </div>
+
+    <div class="project">
+        <a href="https://github.com/mayaschwa/subjectivity-music-analysis">
+            Subjectivity of Music Analysis Using Spotify
+        </a>
+        <div class="tools">Python · NLP · Pandas</div>
+        <div class="project-description">
+            Analyzed subjectivity in Spotify tracks using natural language processing techniques.
+        </div>
+    </div>
+
+    <div class="project">
+        <a href="https://github.com/mayaschwa/supply-chain-order-classification">
+            Supply Chain Order Classification
+        </a>
+        <div class="tools">Python · Scikit-learn · Logistic Regression</div>
+        <div class="project-description">
+            Built a logistic regression model to predict on-time supply chain orders (~79% accuracy).
+        </div>
+    </div>
+
+    <div class="project">
+        <a href="https://github.com/mayaschwa/supply-chain-order-regression">
+            Supply Chain Order Regression
+        </a>
+        <div class="tools">Python · XGBoost · CatBoost · Ensemble Models</div>
+        <div class="project-description">
+            Implemented a stacked ensemble model achieving ~86% predictive performance.
+        </div>
+    </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:mayaschwartz2027.1@u.northwestern.edu">mayaschwartz2027.1@u.northwestern.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/schwartzmaya">www.linkedin.com/in/schwartzmaya</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/schwartzmaya">linkedin.com/in/schwartzmaya</a></p>
     <p>GitHub: <a href="https://github.com/mayaschwa">github.com/mayaschwa</a></p>
 </section>
 
